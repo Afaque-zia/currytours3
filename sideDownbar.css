@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.svg-div {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 8px 0px;
+    z-index: 1000;
+}
+.svg2 {
+    background-color: #bce3bf;
+    padding: 15px 7px 15px 10px !important;
+    border-radius: 5px;
+
+}
+.back-svg {
+    display: none;
+}
+.svg-div span {
+    padding: 0px 10px;
+}
+.sidebar-div {
+    height: 100vh;
+    background-color: rgb(255 255 255 / 76%);
+    backdrop-filter: blur(13px);
+}
+.headings {
+    margin: 8rem 3rem 5rem 3rem;
+    position: relative;
+}
+.heading1 {
+    font-weight: 550 !important;
+}
+.heading1::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    height: 4px;
+    width: 30%;
+    left: 0;
+    top: 25%;
+}
+.headings h3 {
+    font-size: 27px;
+    font-weight: 400;
+    padding: 15px 0px;
+    width: 53%;
+}
+.headings h3:hover {
+    font-size: 27px;
+    font-weight: 550;
+    /* cursor: pointer; */
+}
+.heading-text {
+    margin-left: 6rem;
+}
+.heading-text h5 {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    cursor: pointer;
+}
+#sidebar {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: -102%;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+@media(max-width:1326px){
+    .headings{
+        margin: 6rem 3rem 3rem 3rem; ;
+    }
+}
+@media(max-width:1265px){
+    .headings h3{
+        font-size: 23px;
+    }
+    .heading1::after {
+    left: 18%;
+    top: 20%;
+}
+}
+.sidebar-svg {
+    margin: 4rem 6rem 2rem 6rem;
+}
+.sidebar-div2 {
+    height: 100vh;
+    position: relative;
+}
+.points {
+    position: absolute;
+    top: 20%;
+}
+.points span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.points span:hover {
+    color: green;
+    padding-right: 5px;
+}
+.points div {
+    padding: 15px 0px 15px 40px;
+}
+.downbarheading{
+    margin: 30px 0;
+}
+.downbarheading h4{
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0px 15px;
+}
+.heading-span{
+    display: none;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #bce3bf !important;            
+}
+.heading-span div{
+    padding: 10px 15px;
+}
+.headinglink h5{
+    font-size: 15px;
+    padding: 0px 15px;
+}
+.headinglink{
+    background-color: whitesmoke;
+}
+.spanadd{
+    display: block;
+}
+.downbar{
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    bottom: -102%;
+    width: 100vw;
+    transition: all 0.7s ease;
+    display: none;
+    background-color: white !important;
+    overflow-y: scroll !important;
+    height: 100%;
+    padding: 0 !important;
+}
+@media(max-width:1200px){
+    #sidebar{
+        display: none;
+    }
+    .downbar{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    body{
+        overflow-y: visible !important;
+    }
+}

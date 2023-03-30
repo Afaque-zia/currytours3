@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./sideDownbar.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <style>
+        /*--- 1.8. LINKS ---*/
+        a,
+        a:hover,
+        a:focus {
+            outline: none;
+            color: #339999;
+            position: relative;
+            text-decoration: none;
+        }
+
+        /* Menu button */
+        body .cd-primary-nav-trigger,
+        body .sound {
+            background-color: #c4fdff;
+            bottom: auto;
+            height: 40px;
+            line-height: 30px;
+            border: 2px solid #000000;
+            border-radius: 13px;
+            padding-left: 16px;
+            position: fixed;
+            right: 66px;
+            top: 25px;
+            width: 40px;
+            z-index: 9999999;
+        }
+
+        body .cd-primary-nav-trigger.is-clicked,
+        body .cd-primary-nav-trigger:hover,
+        body .sound:hover,
+        .modify .top:hover {
+            opacity: 0.8;
+        }
+
+        a:before {
+            max-width: 0;
+            border-bottom: 2px solid #339999;
+            content: "";
+            position: absolute;
+            overflow: hidden;
+            color: white;
+            -webkit-transition: max-width 0.5s;
+            -moz-transition: max-width 0.5s;
+            transition: max-width 0.5s;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+        }
+
+        address {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+        }
+
+        body .cd-primary-nav-trigger:before {
+            width: 0;
+        }
+
+        .cd-primary-nav-trigger .cd-menu-icon {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            bottom: auto;
+            right: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            -webkit-transition: background-color 0.3s;
+            -moz-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+        }
+
+        .cd-primary-nav-trigger .cd-menu-icon::before,
+        .cd-primary-nav-trigger .cd-menu-icon:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: black;
+            right: 0;
+            -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+            -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+            transition: transform .3s, top .3s, background-color 0s;
+        }
+
+        .cd-primary-nav-trigger .cd-menu-icon::before {
+            top: -5px;
+        }
+
+        .cd-primary-nav-trigger .cd-menu-icon::after {
+            top: 5px;
+        }
+
+        .cd-primary-nav-trigger.is-clicked .cd-menu-icon {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .cd-primary-nav-trigger.is-clicked .cd-menu-icon::before,
+        .cd-primary-nav-trigger.is-clicked .cd-menu-icon::after {
+            background-color: black;
+        }
+
+        .cd-primary-nav-trigger.is-clicked .cd-menu-icon::before {
+            top: 0;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+
+        .cd-primary-nav-trigger.is-clicked .cd-menu-icon::after {
+            top: 0;
+            -webkit-transform: rotate(-225deg);
+            -moz-transform: rotate(-225deg);
+            -ms-transform: rotate(-225deg);
+            -o-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+        }
+    </style>
+    <title>Curry Tours</title>
+</head>
+
+<body>
+    <a class="cd-primary-nav-trigger" id="trigger-menu" href="javascript:void(0)">
+        <span class="cd-menu-icon"></span>
+    </a>
+    <div class="sidebar-modal">
+        <div class="sidebar-modal-inner">
+            <div class="sidebar-about-area">
+                <div class="title">
+                    <h2>About Us</h2>
+                    <p>We believe brand interaction is key in communication. Real innovations and a positive customer
+                        experience are the heart of successful communication. No fake products and services. The
+                        customer is king, their lives and needs are the inspiration.</p>
+                </div>
+            </div>
+            <div class="sidebar-instagram-feed">
+                <h2>Blog</h2>
+                <ul>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/1.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/2.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/3.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/4.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/5.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/6.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/7.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/sidebar-img/8.jpg" alt="image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-contact-area">
+                <div class="contact-info">
+                    <div class="contact-info-content">
+                        <h2>
+                            <a href="tel:+61-821-456">+61-821-456</a>
+                            <span>OR</span>
+                            <a
+                                href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#0169646d6d6e4175736862642f626e6c"><span
+                                    class="__cf_email__"
+                                    data-cfemail="771f121b1b1837180403165914181a">[email&#160;protected]</span></a>
+                        </h2>
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="close-btn sidebar-modal-close-btn">
+                <i class="bx bx-x"></i>
+            </span>
+        </div>
+    </div>
+
+
+    <section class="banner-area-four">
+        <div class="container">
+            <div class="banner-bg-color">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-text">
+                            <ul class="date">
+                                <li>06 May 2020</li>
+                                <li>Design Trend</li>
+                            </ul>
+                            <h1>A Lifestyles Defined As Content Representing</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-post-wrap owl-carousel owl-theme">
+                <div class="admin-single-post">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img src="assets/img/travel-page-img/admin-post/1.jpg" alt="Image">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="admin-post-admin-text">
+                                <ul class="date">
+                                    <li>20 July 2020</li>
+                                    <li>Travel</li>
+                                </ul>
+                                <a href="blog-details.html">
+                                    <h3>The 32 best things to see and do in Amsterdam</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-single-post">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img src="assets/img/travel-page-img/admin-post/1.jpg" alt="Image">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="admin-post-admin-text">
+                                <ul class="date">
+                                    <li>20 July 2020</li>
+                                    <li>Travel</li>
+                                </ul>
+                                <a href="blog-details.html">
+                                    <h3>The 32 best things to see and do in Amsterdam</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="find-desire-area ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="find-desire-content">
+                        <span>Places</span>
+                        <h2>Find Desire Your Destination Why The Fact Need To Know</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusma velit, sed quia non
+                            numquam eius modi tempora incidunt ut labore dolore magnam alquam quaerat voluptatem sit
+                            amet consectetur adipisicing elit sed.</p>
+                        <a href="about.html" class="default-btn four">
+                            Discover More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-adventurer"></i>
+                                <span>3 Destinations</span>
+                                <h3>Adventure</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-jeep"></i>
+                                <span>6 Destinations</span>
+                                <h3>Popular</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-destination-1"></i>
+                                <span>7 Destinations</span>
+                                <h3>Friendly</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-destination"></i>
+                                <span>9 Destinations</span>
+                                <h3>Camping</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-sunbed"></i>
+                                <span>1 Destinations</span>
+                                <h3>Beaches</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 p-0">
+                            <div class="single-find-desire">
+                                <i class="flaticon-flip-flops"></i>
+                                <span>4 Destinations</span>
+                                <h3>Low Budget</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="destination-area pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-destination">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/destination-img/1.jpg" alt="Image">
+                        </a>
+                        <div class="destination-content">
+                            <span>Check Out My Destination</span>
+                            <a href="blog-details.html">
+                                <h3>Destination</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-destination">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/destination-img/2.jpg" alt="Image">
+                        </a>
+                        <div class="destination-content">
+                            <span>Get Travel Guide</span>
+                            <a href="blog-details.html">
+                                <h3>Travel Guide</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                    <div class="single-destination">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/destination-img/3.jpg" alt="Image">
+                        </a>
+                        <div class="destination-content">
+                            <span>Check Out My Destination</span>
+                            <a href="blog-details.html">
+                                <h3>Instagram</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="exploring-area pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="single-exploring">
+                        <img src="assets/img/travel-page-img/exploring-img/1.jpg" alt="Image">
+                        <div class="exploring-content">
+                            <div class="dddddd">
+                                <img src="assets/img/travel-page-img/shape/1.png" alt="Image">
+                                <ul class="date">
+                                    <li>20 July 2020</li>
+                                    <li>Adventure</li>
+                                </ul>
+                            </div>
+                            <h3>Exploring The Suburb Besides Your Territory Since The Year 2010 With Proper Discovery
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis optio quaerat totam
+                                alias soluta atque veniam a corporis, fuga ut facere eius amet error Culpa aspernatur
+                                voluptate ad modi adipisci consectetur adipisicing elit. Officiis optio quaerat totam
+                                alias soluta atque veniam</p>
+                            <a href="blog-details.html" class="read-more">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                Read Continue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="blogger">
+                        <div class="blogger-img">
+                            <img src="assets/img/interior-page-img/blogger-img.jpg" alt="Image">
+                            <div class="astiver">
+                                <img src="assets/img/travel-page-img/shape/2.png" alt="Image">
+                                <p>Boris Jonson</p>
+                            </div>
+                        </div>
+                        <div class="blogger-content">
+                            <h3>Boris Jonson</h3>
+                            <span>Travel Blogger</span>
+                            <p>I'm Boris sit amet consenter adipisicing elit seedsman</p>
+                            <span class="follow">Follow & Subscribe</span>
+                            <ul class="social-icon">
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bxl-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bxl-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bxl-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="bx bxl-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="advices-area pb-100">
+        <div class="container">
+            <div class="advices-wrap ptb-100">
+                <div class="advices-content">
+                    <div class="advices-shape">
+                        <img src="assets/img/travel-page-img/shape/2.png" alt="Image">
+                        <span>Advices</span>
+                    </div>
+                    <h2>Get Advice From Experts To Beyond With Curry ToursTravel</h2>
+                    <a href="blog-details.html" class="read-more">
+                        <i class="bx bx-right-arrow-alt"></i>
+                        Read Continue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="news-and-blog-area pb-70">
+        <div class="container">
+            <div class="section-title four">
+                <h2>
+                    Featured Blog Posts
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="single-news-blog">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/1.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Safety</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Exploring The Fascinating Places That Can Be Nearer To You</h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-1.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="single-news-blog">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/2.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Music</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Expend The Issues That Was Not Openly to Do With Loud Without Any noise Of Voice
+                                </h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-2.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="single-news-blog">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/3.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Safety</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Most Precious Places Around The World Might You Hadn't Explore</h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-3.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="single-news-blog four">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/4.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Safety</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Exploring The Fascinating Places That Can Be Nearer To You</h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-4.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="single-news-blog">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/5.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Horizon</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>It Has Captivating View If You Haven't Seen</h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-5.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="single-news-blog">
+                        <a href="blog-details.html">
+                            <img src="assets/img/travel-page-img/news-and-blog-img/6.jpg" alt="Image">
+                        </a>
+                        <div class="news-blog-content">
+                            <ul class="date">
+                                <li>21 January 2020</li>
+                                <li>Hillside</li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Dream Plan To Make Your Track Awesome Being Lived As Hillside Habitant</h3>
+                            </a>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-6.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="travel-area pb-100">
+        <div class="container">
+            <div class="travel-from-wrap">
+                <img src="assets/img/travel-page-img/from-img.png" alt="Image">
+            </div>
+        </div>
+    </div>
+
+
+    <section class="from-book-area pb-100">
+        <div class="container">
+            <div class="section-title four">
+                <h2>Osta-Travel The World </h2>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group mb-0">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group mb-0">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <button type="submit" class="default-btn four">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="map-area pb-100">
+        <div class="container">
+            <div class="map-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004082.928417291!2d-104.65713107818928!3d37.27557827818067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1593036851585!5m2!1sen!2sbd"
+                    style="border:0;"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="product-area pb-70">
+        <div class="container">
+            <div class="section-title four">
+                <h2>Travel Essential Products</h2>
+            </div>
+            <div class="product-wrap owl-carousel owl-theme">
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/1.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$67.00</del></li>
+                            <li>$50.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Jumping Shoe</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/2.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$40.00</del></li>
+                            <li>$30.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Travel watch</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/3.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$67.00</del></li>
+                            <li>$50.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Winter Jecket</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/4.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$70.00</del></li>
+                            <li>$50.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Sony Camera</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/5.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$65.00</del></li>
+                            <li>$45.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Coffee Cup</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-product">
+                    <img src="assets/img/travel-page-img/product/6.png" alt="Image">
+                    <div class="product-content">
+                        <ul>
+                            <li><del>$65.00</del></li>
+                            <li>$45.00</li>
+                        </ul>
+                        <a href="cart.html">
+                            <h3>Headphone</h3>
+                        </a>
+                        <a href="cart.html" class="default-btn four">
+                            Add To cart
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="travel-essential-area pb-70">
+        <div class="container">
+            <div class="section-title four">
+                <h2>Travel Essential Products</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-exploring">
+                        <img src="assets/img/travel-page-img/travel-essential-img/1.jpg" alt="Image">
+                        <div class="exploring-content">
+                            <div class="dddddd">
+                                <img src="assets/img/travel-page-img/shape/1.png" alt="Image">
+                                <ul class="date">
+                                    <li>20 July 2020</li>
+                                    <li>Adventure</li>
+                                </ul>
+                            </div>
+                            <h3>Take An Extra Bank Card And Credit Card With You</h3>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-1.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="single-exploring">
+                        <img src="assets/img/travel-page-img/travel-essential-img/2.jpg" alt="Image">
+                        <div class="exploring-content">
+                            <div class="dddddd">
+                                <img src="assets/img/travel-page-img/shape/1.png" alt="Image">
+                                <ul class="date">
+                                    <li>20 July 2020</li>
+                                    <li>Adventure</li>
+                                </ul>
+                            </div>
+                            <h3>But Don’t Be Afraid To Get Purposefully Lost New City Is A Good Way To Get To Know It
+                            </h3>
+                            <div class="admin">
+                                <img src="assets/img/travel-page-img/news-and-blog-img/admin-img-1.jpg" alt="Image">
+                                <span>Anderson Lwis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="instagram-area four">
+        <div class="container-fluid p-0">
+            <div class="section-title four">
+                <h2>
+                    <i class='bx bxl-instagram'></i>
+                    Instagram
+                </h2>
+            </div>
+            <div class="slider-instagram-wrap-four owl-carousel owl-theme">
+                <div class="single-slider-instagram">
+                    <img src="assets/img/travel-page-img/instagram-img/1.jpg" alt="Image">
+                    <div class="instagram-link">
+                        <a href="#">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-slider-instagram">
+                    <img src="assets/img/travel-page-img/instagram-img/2.jpg" alt="Image">
+                    <div class="instagram-link">
+                        <a href="#">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-slider-instagram">
+                    <img src="assets/img/travel-page-img/instagram-img/3.jpg" alt="Image">
+                    <div class="instagram-link">
+                        <a href="#">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-slider-instagram">
+                    <img src="assets/img/travel-page-img/instagram-img/4.jpg" alt="Image">
+                    <div class="instagram-link">
+                        <a href="#">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="single-slider-instagram">
+                    <img src="assets/img/travel-page-img/instagram-img/5.jpg" alt="Image">
+                    <div class="instagram-link">
+                        <a href="#">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-area-four pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-widget">
+                        <img src="assets/img/travel-page-img/footer-logo.png" alt="Image">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae temporibus, suscipit,
+                            doloremque voluptas blanditiis dicta</p>
+                        <ul class="social-icon">
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxl-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxl-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxl-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-widget">
+                        <h3>About Curry Tours</h3>
+                        <ul class="important-link">
+                            <li>
+                                <a href="about.html">+ About me</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">+ Contact </a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">+ Privacy + Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">+ Get in touch</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">+ FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-widget">
+                        <h3>Newsletter</h3>
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="Enter Your Email" name="EMAIL"
+                                required autocomplete="off">
+                            <button class="default-btn four" type="submit">
+                                Subscribe
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </button>
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <footer class="footer-bottom-area">
+        <div class="container">
+            <div class="copy-right">
+                <p>Copyright <i class="bx bx-copyright"></i> 2022 Osta. Designed <a href="https://hibootstrap.com/"
+                        target="blank">HiBootstrap</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="go-top">
+        <i class='bx bx-chevrons-up'></i>
+        <i class='bx bx-chevrons-up'></i>
+    </div>
+    <!-- START SIDEBAR AND DOWNBAR -->
+
+    <div class="container-fluid" id="sidebar" style="">
+        <div class="row">
+            <div class="col-md-4 sidebar-div">
+                <div class="headings">
+                    <h3 class=" heading1 mt-4 ms-5">Places to go</h3>
+                    <h3 class="heading2 mt-4 ms-5">Things to do</h3>
+                    <h3 class="heading3 mt-4 ms-5">practical tips</h3>
+
+                </div>
+                <div class="heading-text">
+                    <h5>Business Events</h5>
+                    <h5>Media</h5>
+                    <h5>Travel Trades</h5>
+                </div>
+                <div class="sidebar-svg">
+                    <img src="./assets/globe.svg" alt="">
+                    <span>English</span>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar-div2 mid-div1" style="background-color: #DBEEFE;">
+                <div class="points">
+                    <div>
+                        <span>Lapland</span>
+                        <img class="image" src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Lakeland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Lapland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Helsinki Region</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Coast and Archipelago</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Nature in finland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>National Park in Finland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar-div2 mid-div2" style="background-color: #DBEEFE;display: none;">
+                <div class="points">
+                    <div>
+                        <span>Curated Journey</span>
+                        <img class="image" src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Summer</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Spring</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Winter</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Autumn</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Things to do by season</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>All things to do</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar-div2 mid-div3" style="background-color: #DBEEFE;display: none;">
+                <div class="points">
+                    <div>
+                        <span>Essential facts about Finland</span>
+                        <img class="image" src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Travel safety in Finland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Sustainable travel</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Finland and COVID-19</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>FAQ about Finland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Arriving and getting around</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                    <div>
+                        <span>Weather in Finland</span>
+                        <img src="./Assets/arrow.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="height:100vh ; background-color: #E1F7E3;">
+            </div>
+        </div>
+    </div>
+    <!-- downbar starts from here.................. -->
+    <div class="container-fluid downbar">
+        <div style="padding: 0px 15px;"><img src="./Assets/finland-icon.svg"></div>
+        <div class="downbarheading">
+            <div style="display:flex; justify-content:space-between;">
+                <h4>Places To go</h4>
+                <span class="downbarsvg"><img src="./Assets/downarrow.svg"></span>
+            </div>
+            <div class="heading-span">
+                <div>
+                    <span>Lapland</span>
+                    <img class="image" src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Lakeland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Lapland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Helsinki Region</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Coast and Archipelago</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Nature in finland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>National Park in Finland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+            </div>
+        </div>
+        <div class="downbarheading">
+            <div style="display:flex; justify-content:space-between;">
+                <h4>Things To do</h4>
+                <span class="downbarsvg"><img src="./Assets/downarrow.svg"></span>
+            </div>
+            <div class="heading-span">
+                <div>
+                    <span>Curated Journey</span>
+                    <img class="image" src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Summer</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Spring</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Winter</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Autumn</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Things to do by season</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>All things to do</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+            </div>
+        </div>
+        <div class="downbarheading">
+            <div style="display:flex; justify-content:space-between;">
+                <h4>Practical Tips</h4>
+                <span class="downbarsvg"><img src="./Assets/downarrow.svg"></span>
+            </div>
+            <div class="heading-span">
+                <div>
+                    <span>Essential facts about Finland</span>
+                    <img class="image" src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Travel safety in Finland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Sustainable travel</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Finland and COVID-19</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>FAQ about Finland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Arriving and getting around</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+                <div>
+                    <span>Weather in Finland</span>
+                    <img src="./Assets/arrow.svg">
+                </div>
+            </div>
+        </div>
+        <div class="headinglink">
+            <h5>Business Events</h5>
+            <h5>Media</h5>
+            <h5>Travel Trades</h5>
+        </div>
+    </div>
+    <!-- END SIDEBAR AND DOWNBAR -->
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/meanmenu.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/magnific-popup.min.js"></script>
+
+    <script src="assets/js/nice-select.min.js"></script>
+
+    <script src="assets/js/form-validator.min.js"></script>
+
+    <script src="assets/js/contact-form-script.js"></script>
+
+    <script src="assets/js/ajaxchimp.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $("#trigger-menu").click(() => {
+            $("#trigger-menu").toggleClass("is-clicked")
+        })
+    </script>
+    <script src="./sideDownbar.js"></script>
+</body>
+
+</html>
