@@ -67,7 +67,7 @@ Array.prototype.filter.call(elements, function(element){
 
 /* ### Fancy Search Form ##################################################################### */
 jQuery( document ).ready(function( $ ) {
-	new UISearch( document.getElementById( 'travelogue-search' ) );
+	// new UISearch( document.getElementById( 'travelogue-search' ) );
 	jQuery('#st-container').load('nav.html', function() {
 		//Begin: MailChimp JS
 		jQuery('#invite').ketchup().submit(function(evt) {
@@ -94,9 +94,6 @@ jQuery( document ).ready(function( $ ) {
 			return false;
 		});
 		//End: MailChimp JS
-	});
-	jQuery( "#trigger-menu" ).click(function() {
-		jQuery('.travelogue-search').fadeToggle('fast');
 	});
 });
 
@@ -169,58 +166,58 @@ function mobilecheck() {
 		return this.replace(/^\s+|\s+$/g, '');
 	});
 
-	function UISearch( el, options ) {	
-		this.el = el;
-		this.inputEl = el.querySelector( 'form > input.travelogue-search-input' );
-		this._initEvents();
-	}
+	// function UISearch( el, options ) {	
+	// 	this.el = el;
+	// 	this.inputEl = el.querySelector( 'form > input.travelogue-search-input' );
+	// 	this._initEvents();
+	// }
 
-	UISearch.prototype = {
-		_initEvents : function() {
-			var self = this,
-				initSearchFn = function( ev ) {
-					ev.stopPropagation();
-					// trim its value
-					self.inputEl.value = self.inputEl.value.trim();
+	// UISearch.prototype = {
+	// 	_initEvents : function() {
+	// 		var self = this,
+	// 			initSearchFn = function( ev ) {
+	// 				ev.stopPropagation();
+	// 				// trim its value
+	// 				self.inputEl.value = self.inputEl.value.trim();
 					
-					if( !classie.has( self.el, 'travelogue-search-open' ) ) { // open it
-						ev.preventDefault();
-						self.open();
-					}
-					else if( classie.has( self.el, 'travelogue-search-open' ) && /^\s*$/.test( self.inputEl.value ) ) { // close it
-						ev.preventDefault();
-						self.close();
-					}
-				}
+	// 				if( !classie.has( self.el, 'travelogue-search-open' ) ) { // open it
+	// 					ev.preventDefault();
+	// 					self.open();
+	// 				}
+	// 				else if( classie.has( self.el, 'travelogue-search-open' ) && /^\s*$/.test( self.inputEl.value ) ) { // close it
+	// 					ev.preventDefault();
+	// 					self.close();
+	// 				}
+	// 			}
 
-			this.el.addEventListener( 'click', initSearchFn );
-			this.el.addEventListener( 'touchstart', initSearchFn );
-			this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
-			this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
-		},
-		open : function() {
-			var self = this;
-			classie.add( this.el, 'travelogue-search-open' );
-			// focus the input
-			if( !mobilecheck() ) {
-				this.inputEl.focus();
-			}
-			// close the search input if body is clicked
-			var bodyFn = function( ev ) {
-				self.close();
-				this.removeEventListener( 'click', bodyFn );
-				this.removeEventListener( 'touchstart', bodyFn );
-			};
-			document.addEventListener( 'click', bodyFn );
-			document.addEventListener( 'touchstart', bodyFn );
-		},
-		close : function() {
-			this.inputEl.blur();
-			classie.remove( this.el, 'travelogue-search-open' );
-		}
-	}
+	// 		this.el.addEventListener( 'click', initSearchFn );
+	// 		this.el.addEventListener( 'touchstart', initSearchFn );
+	// 		this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
+	// 		this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
+	// 	},
+	// 	open : function() {
+	// 		var self = this;
+	// 		classie.add( this.el, 'travelogue-search-open' );
+	// 		// focus the input
+	// 		if( !mobilecheck() ) {
+	// 			this.inputEl.focus();
+	// 		}
+	// 		// close the search input if body is clicked
+	// 		var bodyFn = function( ev ) {
+	// 			self.close();
+	// 			this.removeEventListener( 'click', bodyFn );
+	// 			this.removeEventListener( 'touchstart', bodyFn );
+	// 		};
+	// 		document.addEventListener( 'click', bodyFn );
+	// 		document.addEventListener( 'touchstart', bodyFn );
+	// 	},
+	// 	close : function() {
+	// 		this.inputEl.blur();
+	// 		classie.remove( this.el, 'travelogue-search-open' );
+	// 	}
+	// }
 
-	window.UISearch = UISearch;
+	// window.UISearch = UISearch;
 } )( window );
 
 
