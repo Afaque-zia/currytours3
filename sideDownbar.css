@@ -125,10 +125,13 @@
     padding: 0px 15px;
 }
 .heading-span{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
     font-weight: 700;
     font-size: 20px;
-    background-color: #bce3bf !important;            
+    background-color: #bce3bf !important;      
+    transition: all 0.3s ease-in-out;      
 }
 .heading-span div{
     padding: 10px 15px;
@@ -141,7 +144,9 @@
     background-color: whitesmoke;
 }
 .spanadd{
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
 }
 .downbar{
     position: fixed;

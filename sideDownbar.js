@@ -28,11 +28,16 @@ heading3.addEventListener("mouseover", () => {
     middiv2.style.display = "none"
     middiv3.style.display = "inline"
 })
-hamburger.addEventListener("click", () => {
-    if(hamburger.classList.contains("is-clicked")){
+$("#trigger-menu").click(() => {
+    console.log("clicked")
+    $("#trigger-menu").toggleClass("is-clicked")
+    if($("#trigger-menu")[0].classList.contains("is-clicked")){
+        console.log('clicked')
         if(window.innerWidth <= 1200){
+            console.log('mobile')
             downbar.style.bottom = "0";
         }else{
+            console.log('desktop')
             sidebar.style.left = "0";
         }
         body.style.overflowY = "hidden";
