@@ -1,4 +1,4 @@
-let hamburgersvg = document.querySelector("#trigger-menu");
+let hamburger = document.querySelector("#trigger-menu");
 let backsvg = document.querySelector(".back-svg");
 let sidebar = document.querySelector("#sidebar");
 let mainicon = document.querySelector(".main-icon");
@@ -28,15 +28,21 @@ heading3.addEventListener("mouseover", () => {
     middiv2.style.display = "none"
     middiv3.style.display = "inline"
 })
-hamburgersvg.addEventListener("click", () => {
-    if(hamburgersvg.classList.contains("is-clicked")){
-        sidebar.style.left = "0";
-        downbar.style.bottom = "0";
+hamburger.addEventListener("click", () => {
+    if(hamburger.classList.contains("is-clicked")){
+        if(window.innerWidth <= 1200){
+            downbar.style.bottom = "0";
+        }else{
+            sidebar.style.left = "0";
+        }
         body.style.overflowY = "hidden";
     }else{
-        sidebar.style.left = "-102%";
+        if(window.innerWidth <= 1200){
+            downbar.style.bottom = "-102%";
+        }else{
+            sidebar.style.left = "-102%";
+        }
         body.style.overflowY = "visible";
-        downbar.style.bottom = "-102%";
     }
 })
 downbarsvg.forEach((item,index)=>{
@@ -45,7 +51,6 @@ downbarsvg.forEach((item,index)=>{
             headingspan[index].classList.remove('spanadd')
         }else{
             headingspan[index].classList.add('spanadd')
-            console.log(headingspan)
         }
     })
 })
