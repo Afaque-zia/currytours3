@@ -279,7 +279,7 @@
     }
     #description{
         padding: 50px 22px;
-        margin-top: 200px;
+        margin-top: 150px;
     }
     #description p {
         letter-spacing: 1px;
@@ -292,6 +292,6 @@
         line-height: 36px;
     }
     .mt__200{
-        margin-top: 140px !important;
+        margin-top: 150px !important;
     }
 }
