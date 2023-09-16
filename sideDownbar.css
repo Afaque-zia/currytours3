@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+@font-face {
+    font-family: 'saroja';
+    src: url(./assets/fonts/ThesarojaRegular-4BP7W.otf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
+
 .svg-div {
     position: fixed;
     top: 90%;
@@ -18,30 +26,37 @@
     padding: 8px 0px;
     z-index: 1000;
 }
+
 .svg2 {
     background-color: #bce3bf;
     padding: 15px 7px 15px 10px !important;
     border-radius: 5px;
 
 }
+
 .back-svg {
     display: none;
 }
+
 .svg-div span {
     padding: 0px 10px;
 }
+
 .sidebar-div {
     height: 100vh;
     background-color: rgb(255 255 255 / 76%);
     backdrop-filter: blur(13px);
 }
+
 .headings {
     margin: 8rem 3rem 5rem 3rem;
     position: relative;
 }
+
 .heading1 {
     font-weight: 550 !important;
 }
+
 .heading1::after {
     content: "";
     position: absolute;
@@ -51,26 +66,31 @@
     left: 0;
     top: 25%;
 }
+
 .headings h3 {
     font-size: 27px;
     font-weight: 400;
     padding: 15px 0px;
     width: 53%;
 }
+
 .headings h3:hover {
     font-size: 27px;
     font-weight: 550;
     /* cursor: pointer; */
 }
+
 .heading-text {
     margin-left: 6rem;
 }
+
 .heading-text h5 {
     font-size: 15px;
     font-weight: 400;
     padding: 7px 0px;
     cursor: pointer;
 }
+
 #sidebar {
     position: fixed;
     z-index: 12;
@@ -80,75 +100,93 @@
     height: 100vh;
     transition: all 0.5s ease;
 }
-@media(max-width:1326px){
-    .headings{
-        margin: 6rem 3rem 3rem 3rem; ;
+
+@media(max-width:1326px) {
+    .headings {
+        margin: 6rem 3rem 3rem 3rem;
+        ;
     }
 }
-@media(max-width:1265px){
-    .headings h3{
+
+@media(max-width:1265px) {
+    .headings h3 {
         font-size: 23px;
     }
+
     .heading1::after {
-    left: 18%;
-    top: 20%;
+        left: 18%;
+        top: 20%;
+    }
 }
-}
+
 .sidebar-svg {
     margin: 4rem 6rem 2rem 6rem;
 }
+
 .sidebar-div2 {
     height: 100vh;
     position: relative;
 }
+
 .points {
     position: absolute;
     top: 20%;
 }
+
 .points span {
     font-size: 18px;
     font-weight: 700;
 }
+
 .points span:hover {
     color: green;
     padding-right: 5px;
 }
+
 .points div {
     padding: 15px 0px 15px 40px;
 }
-.downbarheading{
+
+.downbarheading {
     margin: 30px 0;
 }
-.downbarheading h4{
+
+.downbarheading h4 {
     font-weight: 700;
     font-size: 25px;
     padding: 0px 15px;
 }
-.heading-span{
+
+.heading-span {
     visibility: hidden;
     opacity: 0;
     height: 0;
     font-weight: 700;
     font-size: 20px;
-    background-color: #bce3bf !important;      
-    transition: all 0.3s ease-in-out;      
+    background-color: #bce3bf !important;
+    transition: all 0.3s ease-in-out;
 }
-.heading-span div{
+
+.heading-span div {
     padding: 10px 15px;
 }
-.headinglink h5{
+
+.headinglink h5 {
     font-size: 15px;
     padding: 0px 15px;
 }
-.headinglink{
+
+.headinglink {
     background-color: whitesmoke;
 }
-.spanadd{
+
+.spanadd {
     visibility: visible;
     opacity: 1;
     height: 100%;
 }
-.downbar{
+
+.downbar {
     position: fixed;
     z-index: 300;
     left: 0;
@@ -161,16 +199,77 @@
     height: 100%;
     padding: 0 !important;
 }
-@media(max-width:1200px){
-    #sidebar{
+
+@media(max-width:1200px) {
+    #sidebar {
         display: none;
     }
-    .downbar{
+
+    .downbar {
         display: block;
     }
 }
-@media(max-width:400px){
-    body{
+
+@media(max-width:400px) {
+    body {
         overflow-y: visible !important;
     }
+}
+
+.animatedLine {
+    position: relative;
+}
+
+.animatedLine::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background-color: greenyellow;
+    transition: all 0.4s ease;
+}
+
+.animatedLine:hover::before {
+    width: 100%;
+}
+
+#description {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+}
+
+#description p {
+    font-family: 'Mooli', sans-serif;
+    letter-spacing: 2px;
+    line-height: 35px;
+    color: black !important;
+}
+
+.gridTitle {
+    clear: both;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(228, 228, 228);
+    border-left: none;
+    border-right: none;
+}
+.gridTitle h2{
+    font-family: 'saroja';
+    letter-spacing: 4px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
 }
