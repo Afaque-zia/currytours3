@@ -241,11 +241,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 100px;
     text-align: center;
     font-size: 18px;
     line-height: 60px;
     background-color: white;
+    padding: 0px 150px;
 }
 
 #description p {
